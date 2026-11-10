@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d1d">
+<title>For Nabila — Happy Birthday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#100d1d;--pink:#ff8fbd;--lav:#c5b6ff;--white:#fff9fc;--muted:#c7bfd2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#382344 0%,#171326 40%,#0b0a13 100%);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+.noise{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E")}
+main{position:relative;z-index:1}
+nav{max-width:1120px;margin:auto;padding:25px 6%;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;letter-spacing:.13em;font-size:12px;color:#f8d8e7}
+.brand span{color:var(--pink)}
+.music{display:flex;align-items:center;gap:10px;border:1px solid #ffffff24;background:#ffffff0c;color:#fff;padding:9px 14px;border-radius:30px;font:600 12px 'DM Sans';cursor:pointer;backdrop-filter:blur(12px)}
+.music .dot{width:7px;height:7px;background:#ff8fbd;border-radius:50%;box-shadow:0 0 12px #ff8fbd}
+.hero{max-width:1120px;min-height:calc(100vh - 80px);margin:auto;padding:45px 6% 75px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:25px}
+.kicker{color:#ffb6d2;font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:700}
+h1{font:600 clamp(52px,7.4vw,100px)/.98 'Playfair Display',serif;letter-spacing:-.045em;margin:20px 0 18px}
+h1 span{display:block;background:linear-gradient(100deg,#fff 5%,#ffb4d1 55%,#c8baff 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
+.intro{max-width:440px;color:var(--muted);font-size:15px;line-height:1.9}
+.actions{display:flex;align-items:center;gap:15px;margin-top:30px;flex-wrap:wrap}
+.primary{border:0;border-radius:30px;padding:15px 23px;background:linear-gradient(110deg,#ff83b4,#b49cff);color:#241326;font-weight:700;cursor:pointer;box-shadow:0 12px 38px #ff83b433;transition:.25s}
+.primary:hover{transform:translateY(-3px);box-shadow:0 16px 45px #ff83b455}
+.hint{font-size:11px;color:#a9a0b7}
+.art{height:520px;position:relative;display:grid;place-items:center;perspective:1000px}
+.glow{position:absolute;width:350px;height:350px;border-radius:50%;background:#e77bad;filter:blur(100px);opacity:.18}
+.orbit{position:absolute;width:420px;height:420px;border:1px solid #ffffff16;border-radius:50%;transform:rotateX(67deg) rotateZ(-20deg);animation:orbit 18s linear infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:#ffd6e8;box-shadow:0 0 20px #ff9fc8}
+.orbit:before{top:10%;left:15%}.orbit:after{right:12%;bottom:14%;background:#c9b9ff}
+.cake-wrap{position:relative;width:310px;height:330px;transform-style:preserve-3d;animation:float 5s ease-in-out infinite}
+.cake-shadow{position:absolute;bottom:23px;left:20px;width:270px;height:35px;background:#0008;filter:blur(18px);border-radius:50%}
+.plate{position:absolute;bottom:35px;left:0;width:310px;height:55px;border-radius:50%;background:linear-gradient(180deg,#fff1f6,#d88bb4 55%,#805078);box-shadow:0 15px 25px #0006;transform:rotateX(8deg)}
+.base{position:absolute;bottom:55px;left:36px;width:238px;height:112px;border-radius:18px 18px 25px 25px;background:linear-gradient(90deg,#9e477c,#f6a4c6 28%,#ffe1ed 52%,#e67eae 78%,#9d477b);box-shadow:inset 0 -15px 0 #a84d80, inset 0 5px 12px #fff9}
+.toplayer{position:absolute;bottom:153px;left:53px;width:204px;height:75px;border-radius:50% 50% 14px 14px;background:linear-gradient(90deg,#d976a5,#fff0f5 48%,#f4a0c2);box-shadow:inset 0 -9px 0 #df82ae}
+.cream{position:absolute;bottom:194px;left:53px;width:204px;height:27px;border-radius:50%;background:linear-gradient(90deg,#fff0f5,#fff 48%,#ffd4e5);box-shadow:0 7px 0 #e78db6}
+.drip{position:absolute;top:14px;width:14px;height:25px;border-radius:0 0 10px 10px;background:#fff0f5}
+.drip:nth-child(2){left:43px;height:32px}.drip:nth-child(3){left:93px;height:24px}.drip:nth-child(4){left:148px;height:31px}
+.candle{position:absolute;z-index:4;bottom:216px;left:148px;width:14px;height:66px;border-radius:5px;background:repeating-linear-gradient(135deg,#fff 0 8px,#ff83b4 8px 16px);box-shadow:0 0 14px #fff5}
+.flame{position:absolute;left:1px;top:-29px;width:12px;height:25px;border-radius:60% 40% 60% 40%;background:radial-gradient(ellipse at 50% 70%,#fff 0 15%,#ffe58c 40%,#ff8b42 75%);filter:drop-shadow(0 0 14px #ffb84d);animation:flicker .6s infinite alternate}
+.berry{position:absolute;z-index:5;width:15px;height:15px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#ffc4dd,#d84983 70%);box-shadow:0 3px 6px #8e2f61}
+.b1{bottom:213px;left:95px}.b2{bottom:213px;right:95px}.b3{bottom:205px;left:151px;width:11px;height:11px;background:#c7b4ff}
+.spark{position:absolute;color:#ffd6e8;font-size:20px;animation:twinkle 2s infinite alternate}
+.s1{top:18%;left:10%}.s2{right:7%;top:25%;animation-delay:.7s}.s3{bottom:18%;right:10%;animation-delay:1.2s}
+.note{max-width:850px;margin:0 auto 110px;padding:0 6%;text-align:center}
+.gallery{width:88%;max-width:1040px;margin:0 auto 110px}
+.gallery-heading{text-align:center;margin-bottom:26px}
+.gallery-heading .kicker{display:block;margin-bottom:12px}
+.gallery-heading h2{font:600 clamp(32px,5vw,52px)/1.1 'Playfair Display',serif;margin:0}
+.gallery-heading p{color:var(--muted);font-size:14px;margin:12px 0 0}
+.slides{height:clamp(390px,58vw,610px);position:relative;overflow:hidden;border:1px solid #ffffff30;border-radius:30px;background:linear-gradient(135deg,#472b54,#171326);box-shadow:0 30px 90px #0007;isolation:isolate;touch-action:pan-y}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transform:scale(1.04);transition:opacity .8s ease,transform 5.8s ease,visibility .8s}
+.slide.active{opacity:1;visibility:visible;transform:scale(1)}
+.slide img{width:100%;height:100%;display:block;object-fit:cover}
+.slide:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#120d1dc9 0%,#120d1d7a 48%,#120d1d12 100%),linear-gradient(0deg,#100d1da6,transparent 45%)}
+.slide-copy{position:absolute;z-index:1;left:clamp(22px,6vw,68px);bottom:clamp(82px,12vw,112px);max-width:440px;text-align:left}
+.slide-count{display:inline-flex;align-items:center;gap:8px;color:#ffe0eb;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+.slide-count:before{content:"";width:24px;height:1px;background:var(--pink)}
+.slide-copy h3{font:600 clamp(32px,5vw,58px)/1.08 'Playfair Display',serif;margin:15px 0 12px;text-wrap:balance}
+.slide-copy p{max-width:390px;color:#f1e7ef;line-height:1.75;font-size:14px;margin:0}
+.slide-controls{position:absolute;z-index:2;left:clamp(22px,6vw,68px);right:clamp(22px,6vw,68px);bottom:25px;display:flex;align-items:center;justify-content:space-between}
+.slide-dots{display:flex;gap:9px;align-items:center}
+.slide-dot,.slide-arrow{border:1px solid #ffffff60;background:#140f20a8;color:#fff;cursor:pointer;backdrop-filter:blur(8px)}
+.slide-dot{position:relative;width:32px;height:32px;padding:0;border:0;border-radius:50%;background:transparent;transition:.2s}
+.slide-dot:before{content:"";position:absolute;top:50%;left:50%;width:8px;height:8px;border-radius:10px;background:#ffffffa8;transform:translate(-50%,-50%);transition:.2s}
+.slide-dot[aria-current="true"]:before{width:22px;background:#ffb1d0}
+.slide-arrows{display:flex;gap:9px}
+.slide-arrow{width:44px;height:44px;border-radius:50%;font-size:20px;line-height:1}
+.slide-dot:hover:before{background:#fff}
+.slide-arrow:hover{background:#ff8fbd;color:#241326}
+.slide-dot:focus-visible,.slide-arrow:focus-visible,.music:focus-visible,.primary:focus-visible{outline:2px solid #ffe2ed;outline-offset:3px}
+.slides:focus-visible{outline:2px solid #ffe2ed;outline-offset:5px}
+.note-card{position:relative;padding:48px 35px;border:1px solid #ffffff20;border-radius:28px;background:linear-gradient(140deg,#ffffff10,#ffffff05);backdrop-filter:blur(16px);box-shadow:0 25px 80px #0003}
+.note-card:before{content:"“";position:absolute;top:-27px;left:50%;transform:translateX(-50%);font:100px 'Playfair Display';color:#ff9fc8;opacity:.75}
+.note h2{font:600 clamp(30px,4vw,44px) 'Playfair Display';margin:0 0 17px}
+.note p{max-width:620px;margin:auto;color:#d2c8d9;line-height:2;font-size:15px}
+.signature{margin-top:24px;color:#ffb3d0;font:italic 20px 'Playfair Display'}
+footer{text-align:center;padding:0 15px 25px;color:#81798f;font-size:10px;letter-spacing:.18em}
+#toast{position:fixed;z-index:10;bottom:25px;left:50%;transform:translate(-50%,20px);padding:12px 18px;border-radius:30px;background:#292039;border:1px solid #ffffff20;color:#fff;font-size:12px;opacity:0;transition:.3s;pointer-events:none}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes float{0%,100%{transform:translateY(0) rotateY(-7deg)}50%{transform:translateY(-16px) rotateY(7deg)}}
+@keyframes flicker{to{transform:rotate(-8deg) scale(.9);filter:drop-shadow(0 0 19px #ffc24a)}}
+@keyframes orbit{to{transform:rotateX(67deg) rotateZ(340deg)}}
+@keyframes twinkle{to{opacity:.3;transform:scale(.7) rotate(35deg)}}
+@media(max-width:760px){nav{padding:20px 6%}.hero{grid-template-columns:1fr;text-align:center;padding-top:45px;gap:0}.intro{margin:auto}.actions{justify-content:center}.art{height:420px;order:2}.cake-wrap{transform:scale(.88)}.orbit{width:330px;height:330px}.gallery{width:calc(100% - 32px);margin-bottom:75px}.gallery-heading{margin-bottom:20px}.slides{height:min(66vh,560px);min-height:380px;border-radius:24px}.slide img{object-position:center}.slide:after{background:linear-gradient(0deg,#100d1df0 0%,#100d1db8 43%,#100d1d08 100%)}.slide-copy{left:22px;right:22px;bottom:100px}.slide-copy h3{font-size:clamp(30px,8vw,46px);margin:12px 0 10px}.slide-copy p{font-size:14px;line-height:1.65}.slide-controls{left:16px;right:16px;bottom:13px}.slide-arrow{width:44px;height:44px}.note{margin-bottom:75px}.note-card{padding:45px 22px}}
+@media(max-width:390px){.art{height:365px}.cake-wrap{transform:scale(.76)}.orbit{width:290px;height:290px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}.slide{transition:none}}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas><div class="noise"></div>
+<main>
+<nav><div class="brand">A LITTLE SURPRISE <span>✦</span></div><button class="music" id="musicBtn"><span class="dot"></span><span id="musicLabel">Putar musik</span> ♫</button></nav>
+<section class="hero">
+<div class="copy">
+<div class="kicker">Today is all about you</div>
+<h1>Happy<br><span>Birthday,</span><span>Nabila.</span></h1>
+<p class="intro">Untuk seseorang yang membuat dunia terasa sedikit lebih indah. Hari ini adalah tentang kamu, tentang senyummu, dan semua hal baik yang layak Buat Kamu dapatkan.</p>
+<div class="actions"><button class="primary" id="surprise">Buka pesan spesial <span>↗</span></button><span class="hint">A little moment, made just for you.</span></div>
+</div>
+<div class="art" aria-label="Ilustrasi kue ulang tahun 3D">
+<div class="glow"></div><div class="orbit"></div><span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span>
+<div class="cake-wrap"><div class="cake-shadow"></div><div class="plate"></div><div class="base"></div><div class="toplayer"></div><div class="cream"><i class="drip"></i><i class="drip"></i><i class="drip"></i><i class="drip"></i></div><div class="berry b1"></div><div class="berry b2"></div><div class="berry b3"></div><div class="candle"><div class="flame"></div></div></div>
+</div>
+</section>
+<section class="gallery" aria-labelledby="galleryTitle">
+<div class="gallery-heading"><span class="kicker">Little moments, big memories</span><h2 id="galleryTitle">A gallery just for you</h2><p>Geser atau pilih tombol untuk melihat kejutan berikutnya ♡</p></div>
+<div class="slides" id="slides" tabindex="0" aria-label="Galeri foto ulang tahun">
+<article class="slide active" aria-hidden="false"><img src="img/IMG1.JPG" alt="Foto kenangan ulang tahun Nabila, foto 1" fetchpriority="high"><div class="slide-copy"><span class="slide-count">01 / 04</span><h3>Hari ini, semuanya tentang kamu</h3><p>Semoga hari istimewamu dipenuhi tawa, kejutan manis, dan orang-orang yang sayang Sama Kamu.</p></div></article>
+<article class="slide" aria-hidden="true"><img src="img/IMG2.JPG" alt="Foto kenangan ulang tahun Nabila, foto 2" loading="lazy"><div class="slide-copy"><span class="slide-count">02 / 04</span><h3>Terus bersinar, Nabila</h3><p>Semoga setiap Langkah Kamu membawa cerita indah dan alasan baru untuk tersenyum.</p></div></article>
+<article class="slide" aria-hidden="true"><img src="img/IMG3.JPG" alt="Foto kenangan ulang tahun Nabila, foto 3" loading="lazy"><div class="slide-copy"><span class="slide-count">03 / 04</span><h3>Untuk semua mimpi indahmu</h3><p>Semoga doa-doa baikmu menemukan jalan pulang, satu per satu, di waktu yang tepat.</p></div></article>
+<article class="slide" aria-hidden="true"><img src="img/IMG4.JPG" alt="Foto kenangan ulang tahun Nabila, foto 4" loading="lazy"><div class="slide-copy"><span class="slide-count">04 / 04</span><h3>Kamu pantas bahagia</h3><p>Jangan lupa menikmati setiap proses. Dunia terasa lebih indah karena ada kamu di dalamnya. ♡</p></div></article>
+<div class="slide-controls"><div class="slide-dots" role="group" aria-label="Pilih foto"><button class="slide-dot" type="button" aria-label="Foto 1" aria-current="true"></button><button class="slide-dot" type="button" aria-label="Foto 2" aria-current="false"></button><button class="slide-dot" type="button" aria-label="Foto 3" aria-current="false"></button><button class="slide-dot" type="button" aria-label="Foto 4" aria-current="false"></button></div><div class="slide-arrows"><button class="slide-arrow" id="prevSlide" type="button" aria-label="Foto sebelumnya">‹</button><button class="slide-arrow" id="nextSlide" type="button" aria-label="Foto berikutnya">›</button></div></div>
+</div>
+</section>
+<section class="note" id="message"><div class="note-card"><h2>For you, Nabila ♡</h2><p>Selamat ulang tahun, Nabila! Semoga di usia yang baru ini, Langkahnya selalu dipenuhi hal baik. Semoga apa yang sekarang kamu perjuangkan menemukan jalannya, doa-doamu satu per satu menjadi nyata, dan kamu selalu dikelilingi orang-orang yang tulus yang sayang sama kamu. Jangan pernah lupa bahwa kamu berharga dan pantas bahagia. Terus bersinar, ya. Have the loveliest birthday!</p><div class="signature">With love, just for you.</div></div></section>
+<footer>MADE WITH ♥ FOR NABILA</footer>
+</main>
+<div id="toast">Pesan spesial untuk Nabila ♡</div>
+<audio id="birthdayAudio" src="nabil.mp3" preload="auto" loop></audio>
+<script>
+const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');let stars=[];
+function resize(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);stars=Array.from({length:Math.min(150,Math.floor(innerWidth/7))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.4+.25,a:Math.random(),v:(Math.random()*.012+.002)*(Math.random()<.5?1:-1)}))}
+function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);for(const s of stars){s.a+=s.v;if(s.a>1||s.a<.15)s.v*=-1;ctx.globalAlpha=s.a;ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill()}ctx.globalAlpha=1;requestAnimationFrame(draw)}
+resize();draw();addEventListener('resize',resize);
+const slideNodes=[...document.querySelectorAll('.slide')],slideDots=[...document.querySelectorAll('.slide-dot')],slideFrame=document.getElementById('slides');let activeSlide=0,slideTimer;
+function showSlide(index){activeSlide=(index+slideNodes.length)%slideNodes.length;slideNodes.forEach((slide,i)=>{const active=i===activeSlide;slide.classList.toggle('active',active);slide.setAttribute('aria-hidden',String(!active));slideDots[i].setAttribute('aria-current',String(active))})}
+function restartSlideTimer(){clearInterval(slideTimer);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)slideTimer=setInterval(()=>showSlide(activeSlide+1),8500)}
+document.getElementById('prevSlide').addEventListener('click',()=>{showSlide(activeSlide-1);restartSlideTimer()});
+document.getElementById('nextSlide').addEventListener('click',()=>{showSlide(activeSlide+1);restartSlideTimer()});
+slideDots.forEach((dot,i)=>dot.addEventListener('click',()=>{showSlide(i);restartSlideTimer()}));
+slideFrame.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){showSlide(activeSlide+1);restartSlideTimer()}if(e.key==='ArrowLeft'){showSlide(activeSlide-1);restartSlideTimer()}});
+let touchStartX=0;slideFrame.addEventListener('touchstart',e=>{touchStartX=e.changedTouches[0].clientX},{passive:true});slideFrame.addEventListener('touchend',e=>{const delta=e.changedTouches[0].clientX-touchStartX;if(Math.abs(delta)>45){showSlide(activeSlide+(delta<0?1:-1));restartSlideTimer()}},{passive:true});
+restartSlideTimer();
+const audio=document.getElementById('birthdayAudio'),musicBtn=document.getElementById('musicBtn'),musicLabel=document.getElementById('musicLabel');
+let musicContext=null,musicTimer=null,musicPlaying=false,musicNotes=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46],musicStep=0;
+function playSoftNote(){if(!musicContext||musicContext.state!=='running')return;const now=musicContext.currentTime,frequency=musicNotes[musicStep%musicNotes.length];musicStep++;const osc=musicContext.createOscillator(),gain=musicContext.createGain();osc.type='sine';osc.frequency.value=frequency;gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(.045,now+.08);gain.gain.exponentialRampToValueAtTime(.0001,now+.62);osc.connect(gain);gain.connect(musicContext.destination);osc.start(now);osc.stop(now+.65)}
+async function startSoftMusic(){const AudioContextClass=window.AudioContext||window.webkitAudioContext;if(!AudioContextClass)throw new Error('Audio tidak didukung browser ini');musicContext=musicContext||new AudioContextClass();await musicContext.resume();playSoftNote();musicTimer=setInterval(playSoftNote,650);musicPlaying=true}
+async function startMusic(){if(musicPlaying)return;try{await audio.play();musicPlaying=true;musicLabel.textContent='Musik menyala'}catch(fileError){try{await startSoftMusic();musicLabel.textContent='Musik menyala';document.getElementById('toast').textContent='Musik instrumental menyala ♡';showToast()}catch(audioError){musicLabel.textContent='Sentuh untuk musik';document.getElementById('toast').textContent='Musik belum bisa diputar di browser ini';showToast()}}}
+function stopMusic(){audio.pause();if(musicTimer){clearInterval(musicTimer);musicTimer=null}if(musicContext&&musicContext.state==='running')musicContext.suspend();musicPlaying=false;musicLabel.textContent='Putar musik'}
+async function toggleMusic(){if(musicPlaying)stopMusic();else await startMusic()}
+musicBtn.addEventListener('click',toggleMusic);
+audio.addEventListener('play',()=>{musicPlaying=true;musicLabel.textContent='Musik menyala'});
+audio.addEventListener('pause',()=>{if(!musicTimer){musicPlaying=false;musicLabel.textContent='Putar musik'}});
+audio.play().then(()=>{musicPlaying=true;musicLabel.textContent='Musik menyala'}).catch(()=>{musicLabel.textContent='Sentuh untuk musik'});
+document.addEventListener('pointerdown',e=>{if(!e.target.closest('#musicBtn')&&!musicPlaying)startMusic()},{once:true,passive:true});
+document.addEventListener('keydown',e=>{if(!e.target.closest('#musicBtn')&&!musicPlaying)startMusic()},{once:true});
+function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000)}
+document.getElementById('surprise').addEventListener('click',()=>{document.getElementById('message').scrollIntoView({behavior:'smooth'});showToast();if(!musicPlaying)startMusic();for(let i=0;i<45;i++){const p=document.createElement('span');p.textContent=['✦','♡','✧'][i%3];p.style.cssText=`position:fixed;z-index:8;left:${Math.random()*100}vw;top:-20px;color:${['#ff9fc8','#d2c2ff','#fff1b8'][i%3]};font-size:${12+Math.random()*18}px;pointer-events:none;transition:transform ${2+Math.random()*2}s linear,opacity 3s`;document.body.appendChild(p);requestAnimationFrame(()=>{p.style.transform=`translate(${(Math.random()-.5)*150}px,${innerHeight+80}px) rotate(${Math.random()*500}deg)`;p.style.opacity=0});setTimeout(()=>p.remove(),4200)}});
+</script>
+</body>
+</html>
